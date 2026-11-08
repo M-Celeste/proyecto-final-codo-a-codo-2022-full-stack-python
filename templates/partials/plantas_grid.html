@@ -1,0 +1,9 @@
+<p v-if="loading" role="status" class="notice">Buscando un poco de verde…</p>
+<p v-if="error" class="notice error" role="alert">${ error }</p>
+<p v-if="!loading && !error && !plantas.length" class="notice">No encontramos plantas con esos filtros. Probá con otro nombre o categoría.</p>
+<div class="plant-grid">
+  <article v-for="planta in plantas" :key="planta.id" class="plant-card">
+    <div class="plant-media"><a class="plant-photo" :href="'/plantas/' + planta.id" :aria-label="'Ver ' + planta.nombre"><img :src="planta.imagen || '/static/img/planta.svg'" :alt="planta.nombre" :data-planta="planta.nombre" loading="lazy" width="600" height="650"><span class="photo-arrow" aria-hidden="true">↗</span></a><span :class="['stock-label', {unavailable: !planta.stock}]"><span class="stock-dot" aria-hidden="true"></span>${ planta.stock ? 'Disponible' : 'Sin stock' }</span></div>
+    <div class="card-content"><span class="eyebrow">${ planta.categoria }</span><div class="card-title"><h3><a :href="'/plantas/' + planta.id">${ planta.nombre }</a></h3><p>${ money(planta.precio) }</p></div><p class="scientific-name">${ planta.nombre_cientifico }</p><div class="card-care"><span><i class="fa-regular fa-sun" aria-hidden="true"></i> ${ planta.luz || 'Consultar cuidados' }</span><a :href="'/plantas/' + planta.id" :aria-label="'Ver detalle de ' + planta.nombre">Ver planta <span aria-hidden="true">→</span></a></div></div>
+  </article>
+</div>

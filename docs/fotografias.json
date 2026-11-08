@@ -1,0 +1,65 @@
+{
+  "monstera": {
+    "title": "File:Monstera deliciosa2.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Monstera_deliciosa2.jpg/1280px-Monstera_deliciosa2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Monstera_deliciosa2.jpg",
+    "artist": "Raul654",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "local": "/static/img/plantas/monstera.jpg"
+  },
+  "potus": {
+    "title": "File:Money Plant (Epipremnum aureum) 4.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Money_Plant_%28Epipremnum_aureum%29_4.jpg/1920px-Money_Plant_%28Epipremnum_aureum%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Money_Plant_(Epipremnum_aureum)_4.jpg",
+    "artist": "Mokkie",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "local": "/static/img/plantas/potus.jpg"
+  },
+  "lavanda": {
+    "title": "File:Lavandula angustifolia in Sedovo 1.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Lavandula_angustifolia_in_Sedovo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Lavandula_angustifolia_in_Sedovo_1.jpg",
+    "artist": "Andrey Butko",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "local": "/static/img/plantas/lavanda.jpg"
+  },
+  "echeveria": {
+    "title": "File:Echeveria elegans - 1.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Echeveria_elegans_-_1.png/1280px-Echeveria_elegans_-_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Echeveria_elegans_-_1.png",
+    "artist": "EriaWei",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "local": "/static/img/plantas/echeveria.png"
+  },
+  "romero": {
+    "title": "File:Rosmarinus officinalis (1).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Rosmarinus_officinalis_%281%29.jpg/1920px-Rosmarinus_officinalis_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Rosmarinus_officinalis_(1).jpg",
+    "artist": "T137",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "local": "/static/img/plantas/romero.jpg"
+  },
+  "albahaca": {
+    "title": "File:Ocimum basilicum CG NBG LR.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Ocimum_basilicum_CG_NBG_LR.jpg/1920px-Ocimum_basilicum_CG_NBG_LR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Ocimum_basilicum_CG_NBG_LR.jpg",
+    "artist": "PumpkinSky",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "local": "/static/img/plantas/albahaca.jpg"
+  },
+  "vivero": {
+    "title": "File:Cactus and succulent greenhouse interior.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Cactus_and_succulent_greenhouse_interior.jpg/1280px-Cactus_and_succulent_greenhouse_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Cactus_and_succulent_greenhouse_interior.jpg",
+    "artist": "Arjndmkia",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "local": "/static/img/plantas/vivero.jpg"
+  }
+}

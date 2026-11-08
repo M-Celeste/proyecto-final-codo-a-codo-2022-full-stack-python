@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Catálogo · Raíz Celeste{% endblock %}
+{% block content %}
+<section class="section catalog-section" id="catalogo-app" v-cloak><div class="catalog-intro"><div><p class="eyebrow">EL VERDE QUE VA CON VOS</p><h1>Un mundo de plantas.</h1><p>Distintas formas de darle vida a tu espacio.<br>Explorá, elegí y encontrá tu favorita.</p></div><img src="/static/img/plantas/echeveria.png" alt="Roseta de hojas de Echeveria elegans" width="260" height="260"></div>
+<form class="filters" @submit.prevent="cargar"><label>Buscá tu planta<input v-model="q" type="search" maxlength="100" placeholder="Nombre de la planta…"></label><label>Categoría<select v-model="categoria"><option value="">Todas las categorías</option><option v-for="c in categorias" :key="c.id" :value="c.id">${ c.nombre }</option></select></label><label class="check"><input type="checkbox" v-model="disponibles"> Solo disponibles</label><button type="submit"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Buscar</button><button type="button" class="reset-filter" @click="limpiar" v-if="q || categoria || disponibles">Limpiar filtros</button></form>
+<div class="catalog-meta"><span v-if="!loading && !error">${ plantas.length } ${ plantas.length === 1 ? 'planta para descubrir' : 'plantas para descubrir' }</span><span>Elegidas para sumar vida.</span></div>
+{% include 'partials/plantas_grid.html' %}</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/catalogo.js') }}?v=2"></script>{% endblock %}

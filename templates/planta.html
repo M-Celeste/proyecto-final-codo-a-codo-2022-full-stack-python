@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Detalle de planta · Raíz Celeste{% endblock %}
+{% block content %}
+<section class="section" id="detalle-app" data-id="{{ plant_id }}" v-cloak><a href="/catalogo">← Volver al catálogo</a><p v-if="loading" role="status">Cargando planta…</p><p v-if="error" class="notice error" role="alert">${ error }</p><article v-if="planta" class="detail"><img :src="planta.imagen || '/static/img/planta.svg'" :alt="planta.nombre" width="440" height="440"><div><p class="eyebrow">${ planta.categoria }</p><h1>${ planta.nombre }</h1><p><em>${ planta.nombre_cientifico }</em></p><p>${ planta.descripcion }</p><p class="price">${ money(planta.precio) }</p><span class="badge">${ planta.stock ? 'Disponible · ' + planta.stock + ' unidades' : 'Sin stock' }</span><dl><dt>Luz</dt><dd>${ planta.luz || 'Consultanos' }</dd><dt>Riego</dt><dd>${ planta.riego || 'Consultanos' }</dd></dl><a class="button" href="/contacto">Consultar por esta planta</a></div></article></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/catalogo.js') }}"></script>{% endblock %}

@@ -1,0 +1,7 @@
+"""Punto de entrada: flask --app app run --debug."""
+from raiz_celeste import create_app
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=5000)

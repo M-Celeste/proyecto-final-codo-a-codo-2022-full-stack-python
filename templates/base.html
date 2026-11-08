@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Raíz Celeste: plantas, cuidados y un poco de verde para tu día.">
+  <title>{% block title %}Raíz Celeste · Vivero{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  {% block extra_css %}{% endblock %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}?v=2">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/naturaleza.css') }}?v=2">
+  <link rel="icon" href="{{ url_for('static', filename='img/planta.svg') }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement"><span>UN POCO DE VERDE CAMBIA TODO</span><span>Plantas, calma y nuevos comienzos.</span></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Raíz Celeste, inicio"><i class="fa-solid fa-seedling" aria-hidden="true"></i><span class="brand-name">Raíz Celeste<small>VIVERO & NATURALEZA</small></span></a>
+    <nav aria-label="Navegación principal">
+      <a href="/" {% if request.path == '/' %}aria-current="page"{% endif %}>Inicio</a>
+      <a href="/catalogo" {% if request.path == '/catalogo' %}aria-current="page"{% endif %}>Catálogo</a>
+      <a href="/contacto" {% if request.path == '/contacto' %}aria-current="page"{% endif %}>Contacto</a>
+    </nav>
+    <a class="header-cta" href="/catalogo">Encontrá tu planta <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  </header>
+  <main id="contenido" class="container">{% block content %}{% endblock %}</main>
+  <footer class="site-footer"><div class="footer-main"><div><a class="brand" href="/"><i class="fa-solid fa-seedling" aria-hidden="true"></i><span class="brand-name">Raíz Celeste<small>VIVERO & NATURALEZA</small></span></a><p>Un lugar para encontrar tu próxima planta.<br>Y darle un poco más de vida a tus espacios.</p></div><nav aria-label="Navegación del pie"><strong>Explorá</strong><a href="/catalogo">Todas las plantas</a><a href="/catalogo?categoria=Interior">Plantas de interior</a><a href="/contacto">Hablemos de plantas</a></nav><div class="footer-note"><i class="fa-solid fa-sun" aria-hidden="true"></i><p>Crecer lleva su tiempo.<br>Disfrutá el proceso.</p></div></div><div class="footer-bottom"><span>Raíz Celeste · Proyecto educativo de Codo a Codo Full Stack Python</span><div><a href="/creditos">Créditos de fotografías</a><a href="/admin/plantas">Gestión</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.prod.js"></script>
+  <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
