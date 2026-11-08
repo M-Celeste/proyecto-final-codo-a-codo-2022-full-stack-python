@@ -6,16 +6,28 @@ import mysql.connector
 from flask import current_app, g
 
 
-def get_db():
-    if "db" not in g:
-        g.db = mysql.connector.connect(
+def connection_options():
+    options = dict(
             host=current_app.config["MYSQL_HOST"],
             port=current_app.config["MYSQL_PORT"],
             user=current_app.config["MYSQL_USER"],
             password=current_app.config["MYSQL_PASSWORD"],
             database=current_app.config["MYSQL_DATABASE"],
             charset="utf8mb4", connection_timeout=5,
+    )
+    if current_app.config["MYSQL_SSL"]:
+        import certifi
+        options.update(
+            ssl_ca=current_app.config["MYSQL_SSL_CA"] or certifi.where(),
+            ssl_verify_cert=True,
+            ssl_verify_identity=True,
         )
+    return options
+
+
+def get_db():
+    if "db" not in g:
+        g.db = mysql.connector.connect(**connection_options())
     return g.db
 
 

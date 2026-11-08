@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, abort, jsonify, render_template, request
 from mysql.connector import Error, IntegrityError
 
 from . import db
@@ -19,6 +19,9 @@ def create_app(test_config=None):
         MYSQL_USER=os.getenv("MYSQL_USER", "root"),
         MYSQL_PASSWORD=os.getenv("MYSQL_PASSWORD", ""),
         MYSQL_DATABASE=os.getenv("MYSQL_DATABASE", "raiz_celeste"),
+        MYSQL_SSL=os.getenv("MYSQL_SSL", "false").lower() == "true",
+        MYSQL_SSL_CA=os.getenv("MYSQL_SSL_CA", ""),
+        PUBLIC_DEMO=os.getenv("VERCEL") == "1" or os.getenv("PUBLIC_DEMO", "false").lower() == "true",
         MAX_CONTENT_LENGTH=64 * 1024,
     )
     if test_config:
@@ -30,6 +33,15 @@ def create_app(test_config=None):
     from .api import api
     app.register_blueprint(pages)
     app.register_blueprint(api, url_prefix="/api")
+
+    @app.before_request
+    def protect_public_demo():
+        # En Vercel la demostración es de consulta. El CRUD local se conserva.
+        if app.config["PUBLIC_DEMO"]:
+            if request.path == "/admin" or request.path.startswith("/admin/"):
+                abort(404)
+            if request.path.startswith("/api/") and request.method not in {"GET", "HEAD", "OPTIONS"}:
+                return jsonify(error="La demostración pública es de solo lectura."), 403
 
     @app.errorhandler(IntegrityError)
     def integrity_error(error):

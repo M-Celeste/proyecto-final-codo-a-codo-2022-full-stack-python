@@ -287,6 +287,14 @@ tablet y celular. El detalle está documentado en:
 Estas comprobaciones están registradas como validación del desarrollo; el
 repositorio no incluye actualmente una suite automatizada ni un flujo de CI.
 
+## Publicación online
+
+La configuración de Vercel está preparada. La URL pública se agregará después de
+verificar el despliegue y la conexión a la base remota. Consultá la
+[guía de publicación gratuita](docs/despliegue.md). En Vercel la demo es de
+consulta: la administración y las escrituras de la API quedan bloqueadas.
+El CRUD completo se conserva en la instalación local.
+
 ## Alcance de la demostración
 
 Esta versión está preparada para **ejecución local y presentación académica**.
