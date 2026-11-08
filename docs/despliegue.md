@@ -60,8 +60,12 @@ autenticación y autorización; no basta con ocultar enlaces.
 
 ## Estado
 
-Configuración preparada; publicación y conexión remota pendientes de completar
-las cuentas y verificar el despliegue. Todavía no hay una URL pública confirmada.
+Instancia TiDB Cloud Starter creada con compatibilidad MySQL y límite de gasto
+de USD 0 al mes, sin tarjeta. Base `raiz_celeste` inicializada y verificada con
+4 categorías y 6 plantas de demostración.
+
+La publicación en Vercel y la prueba de conexión desde Flask siguen pendientes
+de configurar las credenciales. Todavía no hay una URL pública confirmada.
 
 ## Documentación oficial
 
