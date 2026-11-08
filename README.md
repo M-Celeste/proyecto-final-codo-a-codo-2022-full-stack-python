@@ -14,8 +14,9 @@ interfaz responsive, una API desarrollada con Flask y persistencia en MySQL.
 
 > Proyecto desarrollado con fines académicos para integrar los contenidos del curso
 > **Codo a Codo 4.0 — Full Stack Python, edición 2022**. La implementación utiliza
-> versiones actuales de las tecnologías estudiadas; por ejemplo, Vue 3. El año del
-> título identifica la edición del curso y no la fecha de desarrollo del repositorio.
+> versiones actuales de las tecnologías estudiadas; por ejemplo, Vue 3.
+
+**Nota sobre el historial:** Proyecto desarrollado en 2022 e incorporado a GitHub en 2026. Los archivos originales no conservaban su historial de Git.
 
 ![Página de inicio de Raíz Celeste](docs/images/inicio.jpg)
 
