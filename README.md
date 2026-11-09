@@ -12,6 +12,8 @@
 con un panel de administración para gestionar plantas y categorías. Integra una
 interfaz responsive, una API desarrollada con Flask y persistencia en MySQL.
 
+**[Visitar Raíz Celeste](https://raiz-celeste.vercel.app/)** · [Explorar el catálogo](https://raiz-celeste.vercel.app/catalogo)
+
 > Proyecto desarrollado con fines académicos para integrar los contenidos del curso
 > **Codo a Codo 4.0 — Full Stack Python, edición 2022**. La implementación utiliza
 > versiones actuales de las tecnologías estudiadas; por ejemplo, Vue 3.
@@ -289,23 +291,20 @@ repositorio no incluye actualmente una suite automatizada ni un flujo de CI.
 
 ## Publicación online
 
-La configuración de Vercel está preparada. La URL pública se agregará después de
-verificar el despliegue y la conexión a la base remota. Consultá la
-[guía de publicación gratuita](docs/despliegue.md). En Vercel la demo es de
-consulta: la administración y las escrituras de la API quedan bloqueadas.
-El CRUD completo se conserva en la instalación local.
+La demostración pública funciona en Vercel Hobby con una base TiDB Cloud Starter
+compatible con MySQL. Podés recorrer el catálogo, aplicar filtros y consultar
+las fichas de las plantas. El CRUD completo está disponible en la instalación
+local. Los pasos de configuración están en la [guía de despliegue](docs/despliegue.md).
 
 ## Alcance de la demostración
 
-Esta versión está preparada para **ejecución local y presentación académica**.
+El proyecto incluye una **demostración pública de consulta** y una **versión local con CRUD**.
 
 - El formulario de contacto valida los datos, pero no envía correos ni guarda consultas.
 - El panel de administración aún no implementa autenticación ni autorización.
 - No incluye carrito, pagos, reservas, envíos ni carga de archivos desde el navegador.
 - Los precios, el stock, el mapa y los textos comerciales son datos de demostración.
 - Las fotografías son referencias botánicas; no muestran inventario ni instalaciones propias.
-- El despliegue público de la aplicación está pendiente. GitHub aloja el código;
-  GitHub Pages no ejecuta este servidor Flask ni su base MySQL.
 
 Antes de exponer las operaciones de administración en internet se debe incorporar
 control de acceso y completar la preparación del entorno de producción.
